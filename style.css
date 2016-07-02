@@ -60,56 +60,77 @@ body {
 }
 
 .menu {
+	opacity: .8;
   background-color: #FFFC92;
-  list-style: none; 
-  border: 1px solid #c0c0c0; 
-  float: left; 
+  list-style: none;
+  border: 1px solid #c0c0c0;
+  float: left;
   width: 100%;
   height: 30px;
   position: fixed;
 }
 
 .menu li {
-  position: relative; 
-  float: left; 
-  border-right: 2px solid #F2E453; 
+  position: relative;
+  float: left;
+  border-right: 2px solid #F2E453;
 }
 
 .menu li a {
-  color: #333; 
-  text-decoration: none; 
-  padding: 7.3px 10px; 
+  color: #333;
+  text-decoration: none;
+  padding: 7.3px 10px;
   display: block;
 }
 
 .menu li a:hover {
-  background: #1F1E1C; 
-  color: #FFFDEA; 
-  text-shadow: 0px 0px 6px #fff; 
+  background: #1F1E1C;
+  color: #FFFDEA;
+  text-shadow: 0px 0px 6px #fff;
+}
+
+.submenu1 {
+	position: absolute;
+	top: 30px;
+	left: 0;
+	background-color: #F2E593;
+	display: none;
+}
+
+.submenu2 {
+	position: absolute;
+	top: 30px;
+	left: 0;
+	background-color: #F2E593;
+	display: none;
+}
+
+.menu li:hover .submenu1{
+	display: block
+}
+
+.submenu1 li {
+	border: 1px solid #c0c0c0;
+	display: block;
+	width: 150px;
 }
 
 
-.menu li  ul {
-  position: absolute;
-  top: 30px;
-  left: 0;
-  background-color: #F2E593;
-  display: none;
-}  
-
-.menu li:hover ul, .menu li.over ul {
-  display: block;
+.menu li:hover .submenu2{
+	display: block
 }
 
-.menu li ul li {
-  border: 1px solid #c0c0c0; 
-  display: block; 
-  width: 150px;
+.submenu2 li {
+	border: 1px solid #c0c0c0;
+	display: block;
+	width: 150px;
 }
 
-.post-container {
+
+.inicio {
   width: 100%;
   margin: 0% auto;
+	text-align: center;
 }
 
 .fotos-principais {
@@ -119,21 +140,55 @@ body {
   margin: 0 auto;
 }
 
-
 .ilhas-gregas div {
-  width: 60%;
+  width: 80%;
   margin: 0 auto;
   text-align: center;
+}
+
+.bahamas div {
+	width: 80%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+article.praias section {
+	width: 49%;
+	padding: 1%;
+}
+
+section.texto {
+	text-align: center;
+	float: left;
+}
+
+section.fotos {
+	text-align: center;
+	float: right;
 }
 
 .mar-do-caribe div {
-  width: 60%;
+  width: 80%;
   margin: 0 auto;
   text-align: center;
 }
 
+#fotos-caribe img {
+	display: inline;
+	text-align: center;
+	width: 49.7%;
+	padding: 1px;
+}
+
+#pontos-turisticos {
+	text-align: center;
+	margin: 10px;
+	padding: 30px;
+}
+
+
 .rio-de-janeiro div {
-  width: 60%;
+  width: 80%;
   margin: 0 auto;
   text-align: center;
 }
@@ -146,13 +201,19 @@ body {
   text-align: center;
 }
 
-#sp2{
+#sp2 {
   float: left;
   width: 48%;
   text-align: center;
   padding: 5px;
-  }
+}
 
+#sp2 img:hover {
+		-moz-transform: scale(1.1);
+		-webkit-transform: scale(1.1);
+		-o-transform: scale(1.1);
+		-webkit-transition: 1s all ease;
+}
 
 h1 {
   font-size: 3em;
@@ -192,7 +253,7 @@ i {
 }
 
 p {
-  font-size: .85em;
+  font-size: 1em;
   padding: .5em 0;
   color: #272727;
 }
